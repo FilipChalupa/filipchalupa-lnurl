@@ -5,6 +5,7 @@
 	"private": true,
 	"scripts": {
 		"firebase": "firebase",
+		"emulators": "firebase emulators:start",
 		"build": ""
 	},
 	"repository": {
