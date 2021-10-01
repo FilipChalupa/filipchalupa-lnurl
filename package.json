@@ -5,7 +5,7 @@
 	"private": true,
 	"scripts": {
 		"firebase": "firebase",
-		"build": "cd functions && npm ci && npm run build && cd .."
+		"build": ""
 	},
 	"repository": {
 		"type": "git",
