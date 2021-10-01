@@ -1,4 +1,6 @@
-import * as functions from "firebase-functions";
+import * as functions from 'firebase-functions'
+
+console.log(functions) // @TODO: remove
 
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
