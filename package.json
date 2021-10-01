@@ -1,0 +1,23 @@
+{
+	"name": "filipchalupa-lnurl",
+	"version": "1.0.0",
+	"description": "",
+	"private": true,
+	"scripts": {
+		"firebase": "firebase"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/FilipChalupa/filipchalupa-lnurl.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/FilipChalupa/filipchalupa-lnurl/issues"
+	},
+	"homepage": "https://github.com/FilipChalupa/filipchalupa-lnurl#readme",
+	"dependencies": {
+		"firebase-tools": "^9.19.0"
+	}
+}
