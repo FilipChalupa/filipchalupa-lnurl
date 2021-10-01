@@ -4,7 +4,8 @@
 	"description": "",
 	"private": true,
 	"scripts": {
-		"firebase": "firebase"
+		"firebase": "firebase",
+		"build": "cd functions && npm ci && npm run build && cd .."
 	},
 	"repository": {
 		"type": "git",
