@@ -5,8 +5,12 @@
 	"main": "index.js",
 	"private": true,
 	"dependencies": {},
-	"devDependencies": {},
-	"scripts": {},
+	"devDependencies": {
+		"netlify-cli": "^6.9.28"
+	},
+	"scripts": {
+		"netlify": "netlify"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/FilipChalupa/filipchalupa-lnurl.git"
