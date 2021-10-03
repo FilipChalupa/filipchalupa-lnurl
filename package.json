@@ -7,7 +7,7 @@
 	"dependencies": {},
 	"devDependencies": {},
 	"scripts": {
-		"build": "echo \"Nothing to do\""
+		"build": "mkdir build"
 	},
 	"repository": {
 		"type": "git",
