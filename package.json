@@ -6,10 +6,12 @@
 	"private": true,
 	"dependencies": {},
 	"devDependencies": {
-		"netlify-cli": "^6.9.28"
+		"netlify-cli": "^6.9.28",
+		"netlify-lambda": "^2.0.14"
 	},
 	"scripts": {
-		"netlify": "netlify"
+		"netlify": "netlify",
+		"build:functions": "netlify-lambda build functions"
 	},
 	"repository": {
 		"type": "git",
