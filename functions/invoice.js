@@ -56,7 +56,7 @@ const handler = async (event) => {
 				.doc(invoiceRequest.id)
 				.onSnapshot((snapshot) => {
 					const data = snapshot.data()
-					if (data.request) {
+					if (data && data.request) {
 						clearTimeout(timer)
 						unsubscribe()
 						resolve(data.request)
