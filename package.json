@@ -4,7 +4,11 @@
 	"description": "",
 	"main": "index.js",
 	"private": true,
-	"dependencies": {},
+	"dependencies": {
+		"dotenv": "^10.0.0",
+		"firebase": "^8.10.0",
+		"firebase-admin": "^9.12.0"
+	},
 	"devDependencies": {
 		"netlify-cli": "^6.9.28",
 		"netlify-lambda": "^2.0.14"
