@@ -1,16 +1,41 @@
-// Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
+const createResponse = (payload, statusCode = 200) => ({
+	statusCode,
+	headers: {
+		'Content-Type': 'application/json; charset=utf-8',
+	},
+	body: JSON.stringify(payload),
+})
+
 const handler = async (event) => {
 	try {
-		const subject = event.queryStringParameters.name || 'World'
-		return {
-			statusCode: 200,
-			body: JSON.stringify({ message: `Hello ${subject}` }),
-			// // more keys you can return:
-			// headers: { "headerName": "headerValue", ... },
-			// isBase64Encoded: true,
+		const amount = parseInt(String(event.queryStringParameters.amount), 10) || 0
+		const isTooLow = isNaN(amount) || amount < 10000
+		const isTooHigh = amount > 100000000
+		if (isTooLow || isTooHigh) {
+			return createResponse({
+				reason: isTooLow
+					? 'Amount is too low.'
+					: isTooHigh
+					? 'Amount is too high.'
+					: 'Something went wrong.',
+				status: 'ERROR',
+			})
 		}
+
+		return createResponse({
+			pr: 'xxx',
+			routes: '',
+			successAction: {
+				message: 'Děkuji ⚡ Thank you',
+				tag: 'message',
+			},
+		})
 	} catch (error) {
-		return { statusCode: 500, body: error.toString() }
+		console.error(error)
+		return createResponse(500, {
+			reason: 'Something went wrong.',
+			status: 'Error',
+		})
 	}
 }
 
