@@ -6,9 +6,7 @@
 	"private": true,
 	"dependencies": {},
 	"devDependencies": {},
-	"scripts": {
-		"build": "mkdir build"
-	},
+	"scripts": {},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/FilipChalupa/filipchalupa-lnurl.git"
