@@ -44,7 +44,7 @@ const handler = async (event) => {
 			})
 		}
 
-		const invoiceRequest = db.collection('dev-invoiceRequests').doc()
+		const invoiceRequest = db.collection('invoiceRequests').doc()
 		await invoiceRequest.set({
 			type: 'lnurl',
 			amount,
@@ -52,7 +52,7 @@ const handler = async (event) => {
 		const request = await new Promise((resolve, reject) => {
 			let timer
 			const unsubscribe = db
-				.collection('dev-invoices')
+				.collection('invoices')
 				.doc(invoiceRequest.id)
 				.onSnapshot((snapshot) => {
 					const data = snapshot.data()
