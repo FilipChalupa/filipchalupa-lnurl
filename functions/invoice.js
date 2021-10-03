@@ -69,6 +69,7 @@ const handler = async (event) => {
 		})
 
 		return createResponse({
+			status: 'OK',
 			pr: request,
 			routes: [],
 			successAction: {
@@ -80,7 +81,7 @@ const handler = async (event) => {
 		console.error(error)
 		return createResponse(500, {
 			reason: 'Something went wrong.',
-			status: 'Error',
+			status: 'ERROR',
 		})
 	}
 }
